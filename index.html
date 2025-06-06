@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>不要點</title>
+  <title>不要點這個</title>
   <style>
     body {
       margin: 0;
@@ -21,7 +21,7 @@
       color: white;
       font-size: 3rem;
       letter-spacing: 2px;
-      text-transform: lowercase;
+      text-transform: none;
       opacity: 0;
       animation: fadeIn 2s ease-out forwards;
       transition: text-shadow 0.3s ease;
@@ -39,10 +39,10 @@
   </style>
 </head>
 <body>
-  <div class="centered-text" onclick="showInfo()">obake</div>
+  <div class="centered-text" onclick="showWarning()">不要點這個</div>
 
   <script>
-    function showInfo() {
+    function showWarning() {
       alert("就叫你不要點了");
     }
   </script>
