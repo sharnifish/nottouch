@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>obake</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Helvetica Neue', sans-serif;
+      overflow: hidden;
+    }
+
+    .centered-text {
+      color: white;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+      transition: text-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .centered-text:hover {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="centered-text" onclick="showInfo()">obake</div>
+
+  <script>
+    function showInfo() {
+      alert("obake is a visual identity experiment — minimal, spectral, and unknown.");
+    }
+  </script>
+</body>
+</html>
