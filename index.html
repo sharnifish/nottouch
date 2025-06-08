@@ -1,50 +1,35 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>不要點這個</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
       background-color: #000;
-      height: 100vh;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Helvetica Neue', sans-serif;
-      overflow: hidden;
+      cursor: url('images/cursor.png'), auto; /* images/cursor.png */
+      user-select: none;
     }
 
-    .centered-text {
-      color: white;
-      font-size: 3rem;
-      letter-spacing: 2px;
-      text-transform: none;
-      opacity: 0;
-      animation: fadeIn 2s ease-out forwards;
-      transition: text-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .centered-text:hover {
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to   { opacity: 1; transform: translateY(0); }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
     }
   </style>
 </head>
-<body>
-  <div class="centered-text" onclick="showWarning()">不要點這個</div>
-
-  <script>
-    function showWarning() {
-      alert("就叫你不要點了");
-    }
-  </script>
+<body onclick="alert('就叫你不要點了')">
+  <h1>這裡什麼都沒有喔</h1>
 </body>
 </html>
